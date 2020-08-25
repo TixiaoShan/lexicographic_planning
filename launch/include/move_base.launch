@@ -1,0 +1,24 @@
+<launch>
+
+  <env name="ROSCONSOLE_CONFIG_FILE" value="$(find lexicographic_planning)/launch/include/rosconsole/rosconsole_warn.conf"/>
+
+  <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
+
+    <rosparam file="$(find lexicographic_planning)/launch/params/move_base/costmap_common_params.yaml" command="load" ns="global_costmap" />
+    <rosparam file="$(find lexicographic_planning)/launch/params/move_base/costmap_common_params.yaml" command="load" ns="local_costmap" />
+    
+    <rosparam file="$(find lexicographic_planning)/launch/params/move_base/map_nav_params/local_costmap_params.yaml" command="load" />
+    <rosparam file="$(find lexicographic_planning)/launch/params/move_base/map_nav_params/global_costmap_params.yaml" command="load" />
+    
+    <rosparam file="$(find lexicographic_planning)/launch/params/move_base/dwa_local_planner_params.yaml" command="load" />
+    <rosparam file="$(find lexicographic_planning)/launch/params/move_base/base_local_planner_params.yaml" command="load" />
+    <rosparam file="$(find lexicographic_planning)/launch/params/move_base/move_base_params.yaml" command="load" />
+    
+    <param name="base_global_planner" type="string" value="lex_planner/LEXPlanner" />
+    <param name="base_local_planner" value="base_local_planner/TrajectoryPlannerROS"/>
+    
+    <remap from="odom" to="odometry/filtered" />
+
+  </node>
+
+</launch>

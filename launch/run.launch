@@ -1,0 +1,23 @@
+<launch>
+
+    <arg name="project" default="lexicographic_planning"/>
+
+    <!-- Parameters -->
+    <rosparam file="$(find lexicographic_planning)/config/params.yaml" command="load" />
+
+    <!--- Run Gazebo -->
+    <include file="$(find lexicographic_planning)/launch/include/world.launch" />
+
+    <!--- Run Rviz-->
+    <node pkg="rviz" type="rviz" name="$(arg project)_rviz" args="-d $(find lexicographic_planning)/launch/include/rviz.rviz" />
+
+    <!--- Package -->
+    <node pkg="$(arg project)" type="$(arg project)_pathPlanning"   name="$(arg project)_pathPlanning"     output="screen" respawn="false"/>
+    <node pkg="$(arg project)" type="$(arg project)_pathServer"     name="$(arg project)_pathServer"       output="screen" respawn="false"/>
+    <node pkg="$(arg project)" type="$(arg project)_cloudRegister"  name="$(arg project)_cloudRegister"    output="screen" respawn="false"/>
+    <node pkg="$(arg project)" type="$(arg project)_obstacleServer" name="$(arg project)_obstacleServer"   output="screen" respawn="false"/>
+
+    <!--- Run Move Base -->
+    <include file="$(find lexicographic_planning)/launch/include/move_base.launch" />
+
+</launch>
