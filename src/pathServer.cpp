@@ -143,11 +143,11 @@ public:
 
 int main(int argc, char** argv){
 
-    ros::init(argc, argv, "roboat_planning");
+    ros::init(argc, argv, "lexicographic_planning");
     
     PathServer ps;
 
-    ROS_INFO("\033[1;32m----> roboat_planning: Path Server Started.\033[0m");
+    ROS_INFO("\033[1;32m----> lexicographic_planning: Path Server Started.\033[0m");
 
     ros::spin();
 

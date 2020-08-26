@@ -107,9 +107,9 @@ public:
 
 int main(int argc, char** argv)
 {
-    ros::init(argc, argv, "roboat_planning");
+    ros::init(argc, argv, "lexicographic_planning");
     
-    ROS_INFO("\033[1;32m----> roboat_planning: Cloud Register Started.\033[0m");
+    ROS_INFO("\033[1;32m----> lexicographic_planning: Cloud Register Started.\033[0m");
 
     CloudRegister cr;
 

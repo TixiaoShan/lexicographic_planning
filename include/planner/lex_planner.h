@@ -1,5 +1,5 @@
 #include "utility.h"
-// this is a plugin that receives path from PRM global planner and pass it to move_base
+// this is a plugin that receives path from global planner and pass it to move_base
 #ifndef lex_planner_CPP
 #define lex_planner_CPP
 

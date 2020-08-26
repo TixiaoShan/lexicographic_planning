@@ -1,7 +1,5 @@
 #include "utility.h"
 
-
-
 class obstacleServer : public ParamServer
 {
 public:
@@ -181,29 +179,17 @@ public:
 
             pubOccupancyMap2.publish(occupancyMap2D);
         }
-
-        // if (++count > 5)
-        // {
-        //     ros::Rate r(2);
-        //     while (ros::ok())
-        //     {
-        //         ROS_INFO("Static map");
-        //         pubOccupancyMap.publish(occupancyMap2D);
-        //         pubOccupancyMap2.publish(occupancyMap2D);
-        //         r.sleep();
-        //     }
-        // }
     }
 };
 
 
 int main(int argc, char** argv){
 
-    ros::init(argc, argv, "roboat_planning");
+    ros::init(argc, argv, "lexicographic_planning");
     
     obstacleServer os;
 
-    ROS_INFO("\033[1;32m----> roboat_planning: Obstacle Server Started.\033[0m");
+    ROS_INFO("\033[1;32m----> lexicographic_planning: Obstacle Server Started.\033[0m");
 
     ros::Rate rate(10);
     while (ros::ok())
