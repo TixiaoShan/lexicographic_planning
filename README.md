@@ -4,7 +4,7 @@ This package includes a planning algorithm that utilizes lexicographic optimizat
 
 ## Dependency
 
-Install ROS and [jackal_velodyne](https://github.com/TixiaoShan/jackal_velodyne) package. It is strongly recommended that you upgrade your Gazebo to get better simulation performance.
+Install ROS and [jackal_velodyne](https://github.com/TixiaoShan/jackal_velodyne) package for a minimum demo. It is strongly recommended that you upgrade your Gazebo to get better simulation performance.
 
 - [ROS](http://wiki.ros.org/ROS/Installation) (tested with Kinetic and Melodic)
   ```
@@ -39,7 +39,6 @@ Install ROS and [jackal_velodyne](https://github.com/TixiaoShan/jackal_velodyne)
 ## Testing
 
 Using the following command to start running the package. If this is the first time you run Gazebo on your computer, it may take a while to launch because Gazebo needs to download some resources.
-
   ```
   roslaunch lexicographic_planning run.launch
   ```
@@ -57,7 +56,7 @@ Click **2D Nav Goal** in **Rviz**, then click anywhere in the window. The robot 
 
 ## Paper 
 
-Thank you for citing [out paper](https://arxiv.org/abs/2007.08362) if you use any of this code. 
+Thank you for citing [our paper](https://arxiv.org/abs/2007.08362) if you use any of this code. 
 ```
 @inproceedings{shan2020receding,
   title={A Receding Horizon Multi-Objective Planner for Autonomous Surface Vehicles in Urban Waterways},
