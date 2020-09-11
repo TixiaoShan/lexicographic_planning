@@ -50,7 +50,7 @@ Click **2D Nav Goal** in **Rviz**, then click anywhere in the window. The robot 
 
 ## Parameters
 
- - The number of costs that are optimized are defined by **NUM_COSTS** in ```utility.h```.
+ - The number of costs that are optimized is defined by **NUM_COSTS** in ```utility.h```.
  - The type of costs are defined in **edgePropagation()** function in ```pathPlanning.cpp```.
  - More parameters can be found in ```params.yaml```.
 
@@ -61,7 +61,7 @@ Thank you for citing [our paper](https://arxiv.org/abs/2007.08362) if you use an
 @inproceedings{shan2020receding,
   title={A Receding Horizon Multi-Objective Planner for Autonomous Surface Vehicles in Urban Waterways},
   author={Shan, Tixiao and Wang, Wei and Englot, Brendan and Ratti, Carlo and Rus Daniela},
-  journal={59th IEEE Conference on Decision and Control (CDC)}
+  booktitle={59th IEEE Conference on Decision and Control (CDC)}
   year={2020},
   organization={IEEE}
 }
